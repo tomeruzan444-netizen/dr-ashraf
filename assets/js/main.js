@@ -70,6 +70,61 @@
     });
   }
 
+  /* ------------------------------------------------ hash-free in-page links */
+  /* Anchors scroll to their section but never write "#..." into the address bar,
+     so the URL always stays the clean page URL. Focus still moves to the target,
+     so keyboard and screen-reader users keep the normal skip-link behaviour. */
+  (function cleanAnchors() {
+    var samePage = function (a) {
+      return a.hash && a.pathname === location.pathname && a.host === location.host;
+    };
+
+    var goTo = function (hash, smooth) {
+      var target = null;
+      try { target = doc.querySelector(hash); } catch (e) { return false; }
+      if (!target) return false;
+
+      if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        || root.getAttribute('data-a11y-motion') === '1';
+      target.scrollIntoView({ behavior: (smooth && !reduce) ? 'smooth' : 'auto', block: 'start' });
+      target.focus({ preventScroll: true });
+      return true;
+    };
+
+    doc.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || a.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+      if (!samePage(a)) return;
+      if (!goTo(a.hash, true)) return;
+      e.preventDefault();
+      if (drawer && drawer.classList.contains('is-open')) {
+        var close = $('[data-close]', drawer);
+        if (close) close.click();
+      }
+    });
+
+    var strip = function () {
+      if (window.history && history.replaceState) {
+        history.replaceState(null, '', location.pathname + location.search);
+      }
+    };
+
+    // arriving with a hash (e.g. from another page): scroll, then drop it from the URL
+    var consume = function (smooth) {
+      if (!location.hash) return;
+      var jump = location.hash;
+      window.requestAnimationFrame(function () {
+        goTo(jump, smooth);
+        strip();
+      });
+    };
+
+    consume(false);
+    // …and if a hash still turns up some other way, clean that too
+    window.addEventListener('hashchange', function () { consume(false); });
+  }());
+
   /* ------------------------------------------------- before / after slider */
   $$('.ba').forEach(function (ba) {
     var range = $('.ba__range', ba);

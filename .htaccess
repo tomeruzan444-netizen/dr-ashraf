@@ -1,0 +1,69 @@
+# ===========================================================================
+# ד"ר אשרף אטמנה - הגדרות שרת Apache / cPanel
+# הקובץ אופציונלי: האתר עובד גם בלעדיו (המבנה של תיקייה + index.html
+# נותן כתובות נקיות בכל שרת). הקובץ מוסיף הפניות, דחיסה וקאשינג.
+# שרתים שאינם Apache (Netlify, Vercel, Cloudflare Pages, GitHub Pages)
+# מתעלמים ממנו - שם הכתובות הנקיות עובדות ממילא.
+# ===========================================================================
+
+# ---- דף שגיאה ----
+ErrorDocument 404 /404.html
+
+# ---- קידוד ברירת מחדל ----
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # ---- כפיית HTTPS ----
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # ---- הסרת www (בחרו גרסה אחת בלבד - זו או ההפוכה) ----
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  # ---- הפניה מכתובות ישנות עם .html לכתובות הנקיות ----
+  RewriteRule ^services\.html$   /services/      [R=301,L]
+  RewriteRule ^about\.html$      /about/         [R=301,L]
+  RewriteRule ^contact\.html$    /contact/       [R=301,L]
+  RewriteRule ^privacy\.html$    /privacy/       [R=301,L]
+  RewriteRule ^accessibility\.html$ /accessibility/ [R=301,L]
+  RewriteRule ^index\.html$      /               [R=301,L]
+
+  # ---- /services -> /services/ (השלמת לוכסן) ----
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.*)$ /$1/ [R=301,L]
+</IfModule>
+
+# ---- דחיסה ----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml \
+    application/javascript application/json application/xml \
+    application/manifest+json image/svg+xml
+</IfModule>
+
+# ---- קאשינג ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css              "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType font/woff2            "access plus 1 year"
+  ExpiresByType image/webp            "access plus 6 months"
+  ExpiresByType image/jpeg            "access plus 6 months"
+  ExpiresByType image/png             "access plus 6 months"
+  ExpiresByType image/svg+xml         "access plus 6 months"
+  ExpiresByType text/html             "access plus 0 seconds"
+</IfModule>
+
+# ---- אבטחה בסיסית ----
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always unset X-Powered-By
+</IfModule>
+
+# ---- חסימת גישה לתיקיית כלי הבנייה ----
+RedirectMatch 404 ^/_build/

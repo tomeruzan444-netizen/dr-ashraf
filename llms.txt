@@ -45,11 +45,11 @@
 ## עמודי האתר
 
 - [דף הבית](https://dr-atamna.co.il/): הצגת המרפאה, שירותים מרכזיים, גלריית לפני ואחרי, שאלות נפוצות ויצירת קשר
-- [תחומי עיסוק](https://dr-atamna.co.il/services.html): פירוט מלא של 22 סוגי הטיפולים בשש קטגוריות
-- [אודות](https://dr-atamna.co.il/about.html): הרקע המקצועי של ד"ר אשרף אטמנה והגישה הטיפולית במרפאה
-- [צור קשר](https://dr-atamna.co.il/contact.html): טופס פנייה, פרטי התקשרות, שעות פעילות ומפת הגעה
-- [מדיניות פרטיות](https://dr-atamna.co.il/privacy.html)
-- [הצהרת נגישות](https://dr-atamna.co.il/accessibility.html)
+- [תחומי עיסוק](https://dr-atamna.co.il/services/): פירוט מלא של 22 סוגי הטיפולים בשש קטגוריות
+- [אודות](https://dr-atamna.co.il/about/): הרקע המקצועי של ד"ר אשרף אטמנה והגישה הטיפולית במרפאה
+- [צור קשר](https://dr-atamna.co.il/contact/): טופס פנייה, פרטי התקשרות, שעות פעילות ומפת הגעה
+- [מדיניות פרטיות](https://dr-atamna.co.il/privacy/)
+- [הצהרת נגישות](https://dr-atamna.co.il/accessibility/)
 
 ## שאלות נפוצות
 
