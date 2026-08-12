@@ -30,6 +30,13 @@ PAGES = [
     ('privacy',       'privacy/',       'privacy/index.html'),
     ('accessibility', 'accessibility/', 'accessibility/index.html'),
     ('404',           None,             '404.html'),
+    # עמודי הטיפולים - בני של "תחומי עיסוק", ולכן מסמנים אותו בתפריט
+    ('checkup',       'services/',      'checkup/index.html'),
+    ('emergency',     'services/',      'emergency/index.html'),
+    ('extractions',   'services/',      'extractions/index.html'),
+    ('sealants',      'services/',      'sealants/index.html'),
+    ('root-canal',    'services/',      'root-canal/index.html'),
+    ('scaling',       'services/',      'scaling/index.html'),
 ]
 
 SKIP_PREFIXES = ('#', 'http://', 'https://', '//', '/', 'tel:', 'mailto:',
