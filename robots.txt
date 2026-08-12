@@ -1,6 +1,97 @@
+# robots.txt - ד"ר אשרף אטמנה, רפואת שיניים ואסתטיקה
+# ⚠️ החליפו את הדומיין לדומיין האמיתי של האתר
+
 User-agent: *
 Allow: /
 Disallow: /404.html
+Disallow: /_build/
 
-# ⚠️ החליפו את הדומיין לדומיין האמיתי של האתר
+# ---------------------------------------------------------------------------
+# מנועי חיפוש קלאסיים
+# ---------------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# מנועי תשובות ובינה מלאכותית - מורשים במפורש, כדי שהמרפאה תופיע
+# בתשובות של ChatGPT, Claude, Perplexity, Gemini, AI Overviews וכו'
+# ---------------------------------------------------------------------------
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google Gemini / AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence / Siri
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# נוספים
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+# ---------------------------------------------------------------------------
 Sitemap: https://dr-atamna.co.il/sitemap.xml

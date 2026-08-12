@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ד"ר אשרף אטמנה | רופא שיניים ברמת החייל, תל אביב</title>
+<title>ד"ר אשרף אטמנה - רופא שיניים ואסתטיקה ברמת החייל, תל אביב</title>
 <meta name="description" content="מרפאת השיניים של ד״ר אשרף אטמנה ברמת החייל תל אביב. מעל 22 שנות ניסיון בבדיקות, טיפולי חירום, טיפולי שורש, שתלים, שיקומי פה ואסתטיקה. לתיאום תור: 050-4588554.">
 <meta name="theme-color" content="#324D7E">
 <meta name="author" content="ד״ר אשרף אטמנה">
@@ -14,8 +14,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:site_name" content="ד״ר אשרף אטמנה - רפואת שיניים ואסתטיקה">
-<meta property="og:title" content="ד״ר אשרף אטמנה | רופא שיניים ברמת החייל, תל אביב">
-<meta property="og:description" content="מעל 22 שנות ניסיון ברפואת שיניים - טיפולים משמרים, שיקומי פה, שתלים ואסתטיקה, בגישה אישית ואמפתית.">
+<meta property="og:title" content="ד״ר אשרף אטמנה - רופא שיניים ואסתטיקה ברמת החייל, תל אביב">
+<meta property="og:description" content="ד״ר אשרף אטמנה, רופא שיניים עם מעל 22 שנות ניסיון - טיפולים משמרים, שיקומי פה, שתלים ואסתטיקה, בגישה אישית ואמפתית.">
 <meta property="og:url" content="https://dr-atamna.co.il/">
 <meta property="og:image" content="https://dr-atamna.co.il/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -39,7 +39,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Dentist", "MedicalBusiness", "LocalBusiness"],
+      "@type": ["Dentist", "MedicalClinic", "MedicalBusiness", "LocalBusiness"],
       "@id": "https://dr-atamna.co.il/#clinic",
       "name": "ד״ר אשרף אטמנה - רפואת שיניים ואסתטיקה",
       "alternateName": "Dr. Asharaf Atamna - Dental Surgeon & Esthetic",
@@ -70,7 +70,16 @@
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "09:00", "closes": "19:00" },
         { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "13:00" }
       ],
-      "medicalSpecialty": "Dentistry",
+      "medicalSpecialty": ["Dentistry", "CosmeticDentistry", "Endodontic", "OralSurgery"],
+      "slogan": "רפואת שיניים עם יחס אישי שמרגישים",
+      "knowsAbout": [
+        "בדיקת שיניים תקופתית", "טיפולי חירום בשיניים", "עקירות שיניים", "עקירת שן בינה",
+        "שחזורי קומפוזיט", "איטום חריצים", "טיפול שורש", "הסרת אבנית",
+        "כתרים על גבי שתלים", "כתרי זירקוניה", "כתרי חרסינה", "תותבות על גבי שתלים",
+        "שתלים דנטליים", "השתלת עצם", "הרמת סינוס",
+        "הלבנת שיניים", "ציפויי חרסינה", "חומצה היאלורונית", "בוטוקס",
+        "טיפול ב-Gummy Smile", "טיפול בברוקסיזם"
+      ],
       "founder": { "@id": "https://dr-atamna.co.il/#doctor" },
       "employee": { "@id": "https://dr-atamna.co.il/#doctor" },
       "hasOfferCatalog": {
@@ -97,7 +106,23 @@
       "jobTitle": "רופא שיניים",
       "url": "https://dr-atamna.co.il/about.html",
       "worksFor": { "@id": "https://dr-atamna.co.il/#clinic" },
-      "knowsAbout": ["רפואת שיניים משמרת", "שיקום הפה", "שתלים דנטליים", "טיפולי שורש", "אסתטיקת שיניים", "אסתטיקת פנים"]
+      "knowsLanguage": ["he", "ar", "en"],
+      "knowsAbout": ["רפואת שיניים משמרת", "שיקום הפה", "שתלים דנטליים", "טיפולי שורש", "אסתטיקת שיניים", "אסתטיקת פנים"],
+      "description": "ד״ר אשרף אטמנה הוא רופא שיניים עם מעל 22 שנות ניסיון קליני, המטפל במרפאתו ברמת החייל בתל אביב במגוון רחב של טיפולים - מבדיקות שגרה ומניעה, דרך טיפולי שורש ושיקומים מורכבים, ועד פתרונות אסתטיים מתקדמים."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://dr-atamna.co.il/#webpage",
+      "url": "https://dr-atamna.co.il/",
+      "name": "ד״ר אשרף אטמנה - רופא שיניים ואסתטיקה ברמת החייל, תל אביב",
+      "inLanguage": "he-IL",
+      "isPartOf": { "@id": "https://dr-atamna.co.il/#website" },
+      "about": { "@id": "https://dr-atamna.co.il/#clinic" },
+      "primaryImageOfPage": "https://dr-atamna.co.il/assets/img/og-image.jpg",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".hero h1", ".hero__lead"]
+      }
     },
     {
       "@type": "WebSite",
@@ -110,6 +135,8 @@
     {
       "@type": "FAQPage",
       "@id": "https://dr-atamna.co.il/#faq",
+      "inLanguage": "he-IL",
+      "mainEntityOfPage": { "@id": "https://dr-atamna.co.il/#webpage" },
       "mainEntity": [
         {
           "@type": "Question",
@@ -283,7 +310,7 @@
     <div class="wrap hero__inner">
       <div class="hero__copy">
         <span class="hero__badge"><svg><use href="#i-award"></use></svg>מעל 22 שנות ניסיון קליני</span>
-        <h1>רפואת שיניים ברמה אחרת,<br><em>עם יחס אישי שמרגישים</em></h1>
+        <h1>רפואת שיניים אצל ד״ר אשרף אטמנה,<br><em>עם יחס אישי שמרגישים</em></h1>
         <p class="hero__lead">
           מרפאת ד״ר אשרף אטמנה ברמת החייל, תל אביב, מציעה מגוון רחב של טיפולים -
           מבדיקות שגרה ומניעה, דרך טיפולי שורש ושיקומים מורכבים, ועד פתרונות אסתטיים מתקדמים.

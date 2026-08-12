@@ -541,12 +541,21 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 }
 @media (max-width: 620px) {
   .portrait { width: min(80%, 300px); }
-  .portrait__chip { padding: .42rem .75rem; font-size: .72rem; }
-  .portrait__chip--a { inset-inline-end: -14%; top: 12%; }
-  .portrait__chip--b { inset-inline-start: -16%; top: 40%; }
+  /* his face occupies 34%-64% of the portrait width and 3%-33% of its height.
+     On narrow screens there isn't room to clear it sideways, so the chip drops to
+     shoulder height and shifts further out - the face stays fully visible. */
+  .portrait__chip { padding: .36rem .62rem; font-size: .68rem; gap: .3rem; }
+  .portrait__chip svg { width: 13px; height: 13px; }
+  .portrait__chip--a { inset-inline-end: -18%; top: 38%; }
+  .portrait__chip--b { inset-inline-start: -16%; top: 52%; }
   .portrait__name { inset-inline-start: -8%; bottom: 8%; padding: .55rem .8rem; }
   .portrait__name b { font-size: .86rem; }
   .portrait__name span { font-size: .62rem; }
+}
+@media (max-width: 430px) {
+  .portrait__chip { padding: .32rem .55rem; font-size: .64rem; }
+  .portrait__chip svg { width: 12px; height: 12px; }
+  .portrait__chip--a { inset-inline-end: -22%; top: 39%; }
 }
 @media (max-width: 380px) {
   .portrait__chip--b, .portrait__name span { display: none; }
