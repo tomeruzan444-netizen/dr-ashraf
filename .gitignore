@@ -1,0 +1,23 @@
+# ---- OS junk ----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# ---- editors / local tooling ----
+.claude/
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- python (כלי התחזוקה ב-_build) ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- logs / temp ----
+*.log
+tmp/

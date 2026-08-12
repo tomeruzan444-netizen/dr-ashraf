@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# ⚠️ החליפו את הדומיין לדומיין האמיתי של האתר
+Sitemap: https://dr-atamna.co.il/sitemap.xml

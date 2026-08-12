@@ -1,0 +1,21 @@
+# קבצי טקסט - נשמרים ב-LF במאגר (מונע diff מלוכלך בין Windows ל-Linux)
+*.html   text eol=lf
+*.css    text eol=lf
+*.js     text eol=lf
+*.json   text eol=lf
+*.xml    text eol=lf
+*.txt    text eol=lf
+*.md     text eol=lf
+*.py     text eol=lf
+*.svg    text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
+site.webmanifest text eol=lf
+
+# קבצים בינאריים - לא נוגעים
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.webp   binary
+*.woff2  binary
+*.pdf    binary

@@ -1,0 +1,188 @@
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap page-hero__inner">
+      <nav class="crumbs" aria-label="מיקומך באתר">
+        <ol>
+          <li><a href="index.html">דף הבית</a></li>
+          <li><span aria-current="page">צור קשר</span></li>
+        </ol>
+      </nav>
+      <h1>נשמח לשמוע מכם</h1>
+      <p class="page-hero__lead">
+        רוצים לקבוע תור, לשאול שאלה או לברר לגבי טיפול מסוים?
+        השאירו פרטים ונחזור אליכם, או פשוט התקשרו - אנחנו כאן.
+      </p>
+      <div class="btn-row" style="margin-top:1.8rem">
+        <a class="btn btn--light" href="tel:+972504588554"><svg><use href="#i-phone"></use></svg>050-4588554</a>
+        <a class="btn btn--outline-light" href="https://wa.me/972504588554" target="_blank" rel="noopener"><svg><use href="#i-wa"></use></svg>וואטסאפ</a>
+      </div>
+    </div>
+    <div class="page-hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#fff" d="M0 52c160-38 320-48 480-30s320 56 480 58 320-24 480-58v78H0Z"/></svg>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <!-- ---------- form ---------- -->
+        <div class="info-card">
+          <h3><svg><use href="#i-chat"></use></svg>טופס יצירת קשר</h3>
+          <p style="font-size:var(--fs-sm);margin-bottom:1.4rem">
+            מלאו את הפרטים ונחזור אליכם בהקדם האפשרי בשעות הפעילות.
+            במקרה חירום - עדיף להתקשר ישירות ל-<a href="tel:+972504588554">050-4588554</a>.
+          </p>
+
+          <form class="form" data-contact novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-name">שם מלא <span class="req">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="ישראל ישראלי">
+              </div>
+              <div class="field">
+                <label for="f-phone">טלפון <span class="req">*</span></label>
+                <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="[0-9\-\+\s\(\)]{9,}" placeholder="050-0000000">
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="f-email">אימייל</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="name@example.com">
+              </div>
+              <div class="field">
+                <label for="f-subject">נושא הפנייה</label>
+                <select id="f-subject" name="subject">
+                  <option value="">בחרו נושא…</option>
+                  <option>קביעת תור לבדיקה</option>
+                  <option>טיפול חירום / כאב</option>
+                  <option>טיפולים משמרים</option>
+                  <option>שיקום פה, כתרים ותותבות</option>
+                  <option>שתלים דנטליים וכירורגיה</option>
+                  <option>אסתטיקת שיניים</option>
+                  <option>אסתטיקת פנים</option>
+                  <option>נושא אחר</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-message">איך נוכל לעזור?</label>
+              <textarea id="f-message" name="message" placeholder="ספרו לנו בקצרה מה מטריד אתכם, ממתי, ומה חשוב לכם שנדע לפני הפגישה"></textarea>
+            </div>
+
+            <div class="field" hidden aria-hidden="true">
+              <label for="f-company">אל תמלאו שדה זה</label>
+              <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="consent" required>
+              <span>קראתי ואני מאשר/ת את <a href="privacy.html">מדיניות הפרטיות</a> של האתר ואת יצירת הקשר עמי בעקבות הפנייה.</span>
+            </label>
+
+            <button class="btn btn--block" type="submit">שליחת הפנייה<svg><use href="#i-arrow"></use></svg></button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- ---------- details ---------- -->
+        <div>
+          <div class="info-card">
+            <h3><svg><use href="#i-phone"></use></svg>דרכי התקשרות</h3>
+            <ul class="info-list">
+              <li>
+                <svg><use href="#i-phone"></use></svg>
+                <div><b>טלפון</b><a href="tel:+972504588554">050-4588554</a></div>
+              </li>
+              <li>
+                <svg><use href="#i-wa"></use></svg>
+                <div><b>וואטסאפ</b><a href="https://wa.me/972504588554" target="_blank" rel="noopener">שליחת הודעה מהירה</a></div>
+              </li>
+              <li>
+                <svg><use href="#i-mail"></use></svg>
+                <div><b>אימייל</b><a href="mailto:drasrf.clinic@gmail.com">drasrf.clinic@gmail.com</a></div>
+              </li>
+              <li>
+                <svg><use href="#i-pin"></use></svg>
+                <div>
+                  <b>כתובת המרפאה</b>
+                  <a href="https://waze.com/ul?q=%D7%94%D7%A8%D7%95%D7%92%D7%99%20%D7%9E%D7%9C%D7%9B%D7%95%D7%AA%207%20%D7%AA%D7%9C%20%D7%90%D7%91%D7%99%D7%91" target="_blank" rel="noopener">רח׳ נמירובר 2 (הרוגי מלכות 7), רמת החייל, תל אביב</a>
+                </div>
+              </li>
+            </ul>
+            <div class="btn-row" style="margin-top:1.5rem">
+              <a class="btn btn--sm" href="tel:+972504588554"><svg><use href="#i-phone"></use></svg>חיוג מהיר</a>
+              <a class="btn btn--ghost btn--sm" href="https://waze.com/ul?q=%D7%94%D7%A8%D7%95%D7%92%D7%99%20%D7%9E%D7%9C%D7%9B%D7%95%D7%AA%207%20%D7%AA%D7%9C%20%D7%90%D7%91%D7%99%D7%91" target="_blank" rel="noopener"><svg><use href="#i-waze"></use></svg>ניווט בוויז</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3><svg><use href="#i-clock"></use></svg>שעות פעילות</h3>
+            <!-- ⚠️ לעדכן לשעות הפעילות המדויקות של המרפאה -->
+            <ul class="hours">
+              <li><b>ראשון</b><span>09:00 - 19:00</span></li>
+              <li><b>שני</b><span>09:00 - 19:00</span></li>
+              <li><b>שלישי</b><span>09:00 - 19:00</span></li>
+              <li><b>רביעי</b><span>09:00 - 19:00</span></li>
+              <li><b>חמישי</b><span>09:00 - 19:00</span></li>
+              <li><b>שישי</b><span>09:00 - 13:00</span></li>
+              <li><b>שבת</b><span>סגור</span></li>
+            </ul>
+            <p class="note" style="margin-top:1.2rem">
+              <svg><use href="#i-emergency"></use></svg>
+              <span>טיפולי חירום ניתנים בשעות הפעילות. במקרה של כאב חד, שבר או נפיחות - התקשרו מראש והגיעו עם הצילומים הקיימים.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== map ===================== -->
+  <section class="section section--tint" style="padding-top:0" aria-labelledby="map-title">
+    <div class="wrap" style="padding-top:var(--section-y)">
+      <div class="head head--center">
+        <span class="head__ghost" aria-hidden="true">LOCATION</span>
+        <div class="head__title">
+          <span class="head__eyebrow">איך מגיעים</span>
+          <h2 id="map-title">רמת החייל, תל אביב</h2>
+          <p class="head__text">
+            המרפאה ממוקמת ברמת החייל, עם גישה נוחה מנתיבי איילון ומכל אזור המרכז.
+            בסביבה קיימת חנייה ציבורית ובכחול-לבן ברחובות הסמוכים.
+          </p>
+        </div>
+      </div>
+
+      <div class="map" style="aspect-ratio:16/7">
+        <button class="map__facade" type="button"
+          data-src="https://www.google.com/maps?q=%D7%94%D7%A8%D7%95%D7%92%D7%99+%D7%9E%D7%9C%D7%9B%D7%95%D7%AA+7+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91&output=embed&hl=iw"
+          data-title="מפת הגעה למרפאת ד״ר אשרף אטמנה">
+          <span>
+            <svg class="map__pin"><use href="#i-pin"></use></svg>
+            <b>הצגת המפה</b>
+            <span>רח׳ נמירובר 2 (הרוגי מלכות 7), רמת החייל, תל אביב</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div>
+          <h2>מעדיפים פשוט להתקשר?</h2>
+          <p>אנחנו זמינים בשעות הפעילות ונשמח לענות על כל שאלה - גם לפני שקובעים תור.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn--light" href="tel:+972504588554"><svg><use href="#i-phone"></use></svg>050-4588554</a>
+          <a class="btn btn--outline-light" href="mailto:drasrf.clinic@gmail.com"><svg><use href="#i-mail"></use></svg>שליחת מייל</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
