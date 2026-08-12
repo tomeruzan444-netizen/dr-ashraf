@@ -277,6 +277,7 @@
 
       var data = new FormData(form);
       var endpoint = form.getAttribute('data-endpoint');
+      var to = form.getAttribute('data-mailto') || 'drasrf.clinic@gmail.com';
       var name = (data.get('name') || '').toString().trim();
       var phone = (data.get('phone') || '').toString().trim();
       var email = (data.get('email') || '').toString().trim();
@@ -286,39 +287,61 @@
       // honeypot - silently accept bots
       if ((data.get('company') || '').toString()) { say('תודה! ההודעה נשלחה.', 'ok'); form.reset(); return; }
 
+      var FAIL = 'אירעה תקלה בשליחה. אפשר להתקשר ל-03-6483477 / 050-4588554 או לכתוב ל-' + to;
+
       if (endpoint) {
         submit.disabled = true;
         say('שולח…', '');
+
+        // the Hebrew keys become the row labels in the e-mail the clinic receives,
+        // so a lead arrives as a readable table and not as raw field names
+        var payload = {
+          'שם מלא': name,
+          'טלפון': phone,
+          'אימייל': email || '(לא נמסר)',
+          'נושא הפנייה': subject || '(לא נבחר)',
+          'הודעה': message || '(ללא הודעה)',
+          'נשלח מהעמוד': location.href,
+          'תאריך ושעה': new Date().toLocaleString('he-IL'),
+          _subject: 'פנייה חדשה מהאתר' + (name ? ' - ' + name : ''),
+          _template: 'table',
+          _captcha: 'false'
+        };
+        if (email) payload._replyto = email;   // "Reply" goes straight back to the patient
+
         fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({ name: name, phone: phone, email: email, subject: subject, message: message })
+          body: JSON.stringify(payload)
         }).then(function (res) {
-          if (!res.ok) throw new Error('bad response');
+          return res.json().catch(function () { return { ok: res.ok }; });
+        }).then(function (body) {
+          var ok = body && (body.success === 'true' || body.success === true ||
+                            body.ok === true || body.id || body.next);
+          if (!ok) throw new Error('rejected');
           form.reset();
-          say('תודה ' + name + '! ההודעה התקבלה ונחזור אליך בהקדם.', 'ok');
+          say('תודה' + (name ? ' ' + name : '') + '! הפנייה התקבלה ונחזור אליך בהקדם.', 'ok');
         }).catch(function () {
-          say('אירעה תקלה בשליחה. אפשר להתקשר אלינו ל-050-4588554 או לכתוב ל-drasrf.clinic@gmail.com', 'err');
+          say(FAIL, 'err');
         }).then(function () { submit.disabled = false; });
         return;
       }
 
-      // fallback: open the visitor's mail client with a prefilled message
+      // no endpoint configured - open the visitor's mail client with a prefilled message
       var lines = [
-        'שם: ' + name,
+        'שם מלא: ' + name,
         'טלפון: ' + phone,
         email ? 'אימייל: ' + email : '',
-        subject ? 'נושא: ' + subject : '',
+        subject ? 'נושא הפנייה: ' + subject : '',
         '',
         message
       ].filter(Boolean).join('\n');
 
-      var href = 'mailto:drasrf.clinic@gmail.com'
-        + '?subject=' + encodeURIComponent('פנייה מהאתר' + (subject ? ' - ' + subject : ''))
+      window.location.href = 'mailto:' + to
+        + '?subject=' + encodeURIComponent('פנייה חדשה מהאתר' + (subject ? ' - ' + subject : ''))
         + '&body=' + encodeURIComponent(lines);
 
-      window.location.href = href;
-      say('נפתחה עבורך תוכנת הדוא"ל לשליחת הפנייה. אפשר גם להתקשר ישירות: 050-4588554', 'ok');
+      say('נפתחה עבורך תוכנת הדוא"ל לשליחת הפנייה. אפשר גם להתקשר ישירות: 03-6483477', 'ok');
     });
   });
 }());
