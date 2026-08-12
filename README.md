@@ -195,6 +195,48 @@ Cloudflare Pages, GitHub Pages ו-cPanel - בלי שום קונפיגורציה.
 
 ---
 
+## 🔗 תמונת שיתוף לרשתות (Open Graph)
+
+הקובץ `assets/img/og-image.jpg` (1200×630) הוא מה שמופיע בתצוגה המקדימה
+כששולחים קישור לאתר ב**וואטסאפ, פייסבוק, טלגרם, לינקדאין ו-X**.
+הוא מכיל את התמונה של ד"ר אשרף על רקע המותג, את השם, התחום, הוותק והטלפון.
+
+התגיות מוגדרות בכל ששת העמודים:
+`og:image`, `og:image:secure_url`, `og:image:type`, `og:image:width`,
+`og:image:height`, `og:image:alt`, `twitter:card`, `twitter:image`, `twitter:image:alt`.
+
+### ⚠️ התצוגה המקדימה לא תעבוד עד שיוגדר הדומיין האמיתי
+
+הכתובת בתגית `og:image` היא **מוחלטת** (`https://dr-atamna.co.il/assets/img/og-image.jpg`),
+כי רשתות חברתיות לא יודעות לקרוא כתובות יחסיות. כל עוד הדומיין הוא מציין המקום,
+וואטסאפ ופייסבוק ינסו למשוך תמונה מכתובת שלא קיימת ולא תופיע תצוגה מקדימה.
+זו לא תקלה באתר - זה פשוט הדומיין. אחרי החלפתו הכול יעבוד.
+
+### רענון המטמון אחרי שינוי
+
+וואטסאפ ופייסבוק שומרים את התצוגה המקדימה במטמון לאורך זמן. אחרי כל שינוי
+בתמונה או בכותרות צריך לרענן ידנית:
+
+- **פייסבוק / וואטסאפ:** https://developers.facebook.com/tools/debug/ → הדביקו את הכתובת → *Scrape Again*
+- **לינקדאין:** https://www.linkedin.com/post-inspector/
+- **X:** https://cards-dev.twitter.com/validator
+
+### בנייה מחדש של התמונה
+
+אם ישתנה הטלפון, הכתובת או התמונה של ד"ר אשרף:
+
+```bash
+cd _build
+python make-og-image.py
+```
+
+הטקסטים נמצאים בראש הסקריפט (`NAME`, `ROLE`, `META`, `PHONE`).
+הסקריפט מוריד לבד את הגופן Assistant בהרצה הראשונה.
+
+> דרישות: `pip install pillow pymupdf python-bidi`
+
+---
+
 ## 🔍 SEO
 
 - כותרת ותיאור ייחודיים לכל עמוד, `canonical`, Open Graph ו-Twitter Card.

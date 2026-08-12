@@ -21,3 +21,6 @@ venv/
 # ---- logs / temp ----
 *.log
 tmp/
+
+# גופנים שמורדים אוטומטית ע"י make-og-image.py
+_build/.fonts/
