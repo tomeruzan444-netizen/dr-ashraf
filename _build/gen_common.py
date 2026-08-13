@@ -42,7 +42,7 @@ def head(p):
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="he_IL">
-<meta property="og:site_name" content="ד״ר אשרף אטמנה - רפואת שיניים ואסתטיקה">
+<meta property="og:site_name" content="ד״ר אשרף עתאמנה - רפואת שיניים ואסתטיקה">
 <meta property="og:title" content="{ogtitle}">
 <meta property="og:description" content="{ogdesc}">
 <meta property="og:url" content="{url}">
@@ -51,10 +51,10 @@ def head(p):
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="ד״ר אשרף אטמנה, רופא שיניים ואסתטיקה ברמת החייל, תל אביב">
+<meta property="og:image:alt" content="ד״ר אשרף עתאמנה, רופא שיניים ואסתטיקה ברמת החייל, תל אביב">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{base}/assets/img/og-image.jpg">
-<meta name="twitter:image:alt" content="ד״ר אשרף אטמנה, רופא שיניים ואסתטיקה ברמת החייל, תל אביב">
+<meta name="twitter:image:alt" content="ד״ר אשרף עתאמנה, רופא שיניים ואסתטיקה ברמת החייל, תל אביב">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
@@ -183,7 +183,7 @@ def sources_html(p):
 %s
         </ul>
         <p style="font-size:var(--fs-xs);color:var(--muted);margin-top:.8rem">
-          המידע בעמוד זה נכתב על ידי ד״ר אשרף אטמנה ומיועד להיכרות כללית עם הטיפול.
+          המידע בעמוד זה נכתב על ידי ד״ר אשרף עתאמנה ומיועד להיכרות כללית עם הטיפול.
           הוא אינו מהווה ייעוץ רפואי, אבחנה או תחליף לבדיקה קלינית. התאמת הטיפול
           נקבעת בבדיקה אישית במרפאה.
         </p>
