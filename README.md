@@ -24,7 +24,10 @@
 ### אופציונלי אך מומלץ
 - **קואורדינטות מדויקות** - להוסיף `geo` (latitude/longitude) ל-JSON-LD בדף הבית ובדף צור קשר.
 - **Google Business Profile** - לאמת את העסק ולחבר את אותה כתובת ואותו טלפון בדיוק כפי שמופיעים באתר (NAP עקבי = דירוג מקומי טוב יותר).
-- **Google Search Console** - להגיש את `sitemap.xml` אחרי העלייה לאוויר.
+- **Google Search Console** - תג האימות כבר מוטמע בכל העמודים
+  (`<meta name="google-site-verification" ...>` ב-`index.html` ובכל קובץ `_build/*.head.html`).
+  לאחר שהאתר יהיה נגיש בכתובת שרוצים לאמת - לוחצים "אמת" בסרצ׳ קונסול,
+  ואז מגישים את `sitemap.xml`.
 
 ---
 
