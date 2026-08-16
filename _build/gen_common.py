@@ -8,7 +8,7 @@ except Exception:
 
 SITE = os.path.join('c:/', 'd-e-v', '\u05d3\u05e8 \u05d0\u05e9\u05e8\u05e3')
 BUILD = os.path.join(SITE, '_build')
-BASE = 'https://dr-atamna.co.il'
+BASE = 'https://dr-ashraf.co.il'
 
 TITLES = {
     'checkup':     ('בדיקה כללית', 'i-tooth-check'),

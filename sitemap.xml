@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ⚠️ החליפו את הדומיין dr-atamna.co.il לדומיין האמיתי, ועדכנו את lastmod בכל שינוי תוכן -->
+<!-- עדכנו את lastmod בכל שינוי תוכן מהותי -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dr-atamna.co.il/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/services/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/services/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/checkup/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/checkup/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/emergency/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/emergency/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/extractions/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/extractions/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/sealants/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/sealants/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/root-canal/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/root-canal/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/scaling/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/scaling/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/about/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/about/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/contact/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/contact/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/accessibility/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/accessibility/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://dr-atamna.co.il/privacy/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://dr-ashraf.co.il/privacy/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
